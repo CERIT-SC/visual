@@ -1,0 +1,75 @@
+\ProvidesPackage{beamerthemeceritsc}
+
+\ProcessOptionsBeamer
+
+\mode<presentation>
+%\definecolor{ceritred}{RGB}{159,44,36}
+\definecolor{ceritred}{RGB}{255,0,0}
+%\definecolor{ceritcyan}{RGB}{97,212,220}
+\definecolor{ceritcyan}{RGB}{0,0,220}
+
+\defbeamertemplate*{frametitle}{ceritsc theme}
+{
+\vbox to 0pt{
+\includegraphics[width=\hsize]{CERIT_Prezentace_zahlavi2}
+\vss
+}
+\vbox to 40pt{
+\vfill
+\leavevmode\hfill
+\raise17pt\hbox{\usebeamerfont{frametitle}{\insertframetitle}}
+}
+}
+
+\useoutertheme{infolines}
+\setbeamertemplate{headline}{}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{series=\bfseries}
+
+\setbeamercolor{frametitle}{fg=black}
+
+\setbeamercolor{alerted text}{fg=ceritcyan!80!black}
+
+\setbeamercolor{itemize item}{fg=ceritred}
+\setbeamercolor{itemize subitem}{fg=ceritred}
+\setbeamercolor{itemize susubbitem}{fg=ceritred}
+
+\setbeamertemplate{blocks}[shadow=yes]
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!black}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{structure}{fg=ceritred!90!white}
+
+\setbeamertemplate{title page}{
+\includegraphics[width=\hsize]{CERIT_Prezentace_zahl_titul}
+
+\centering
+\vfill
+{\usebeamerfont{title} \inserttitle}
+\medskip
+
+{\usebeamerfont{subtitle} \insertsubtitle}
+
+\bigskip
+{\usebeamerfont{author} \insertauthor}
+
+\bigskip
+{\usebeamerfont{date} \insertdate}
+
+\vfill
+%\rule{\hsize}{1pt}\par
+%\vspace{3pt}
+%\includegraphics[width=\hsize]{CERIT_Prezentace_zapati}\\
+\includegraphics[width=\hsize,trim={40mm 60mm 80mm 80mm},clip]{OPVVV_loga}
+\par
+\kern -30mm
+}
+
+
